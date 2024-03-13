@@ -21,7 +21,7 @@ from users.views import UserRegistrationAPIView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("singlepage.urls")),               # new
-	path('api-auth/', include('rest_framework.urls')),
+	path('api/auth/', include('rest_framework.urls')),
 	 path('api/users/register/',
          UserRegistrationAPIView.as_view(),
          name='user-register'),
